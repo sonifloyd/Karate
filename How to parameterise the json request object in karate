@@ -1,0 +1,8 @@
+{request;{ first:value1, second:[value1,value2] }}
+
+
+
+* def v1 = 'value1'
+* def arr = [ 'value1', 'value2' ]
+* def body = { first: '#(v1)', second: '#(arr)' }
+* match body == { first: 'value1', second: [ 'value1', 'value2' ] }
