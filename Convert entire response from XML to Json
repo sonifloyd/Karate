@@ -1,0 +1,8 @@
+
+
+* def xmlres = response
+* json jsonres = xmlres
+* match jsonres == response
+* print jsonres
+
+Then match response contains 'Success'
