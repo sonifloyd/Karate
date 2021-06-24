@@ -1,0 +1,4 @@
+{
+"skuList":["#(sku1)","#(sku2)","#(sku3)","#(sku4)"],
+"vendorId":"#(vendorid_value)",
+"orderType": "Catalouge"}
