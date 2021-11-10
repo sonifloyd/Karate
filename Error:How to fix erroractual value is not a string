@@ -1,0 +1,7 @@
+error: successful, actual: false, expected: 'false', reason: actual value is not a string
+
+
+Response code:
+{"successful":false,"message":null,"errors
+
+Solution :And match response.successful == false
