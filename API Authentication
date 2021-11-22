@@ -1,0 +1,2 @@
+* def accessToken = response.access_token
+And header Authentication = 'Bearer'+ accessToken
