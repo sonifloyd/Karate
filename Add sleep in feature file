@@ -1,0 +1,2 @@
+* def sleep = function(millis){ java.lang.Thread.sleep(millis) }
+* sleep(1000)
