@@ -1,0 +1,7 @@
+Scenario Outline: Check Request and Response 
+
+Given url 'http://abc/web/juk/nmr/Accounts('<accountNumber>')'
+    When method GET
+    Then status 200
+    And match $ == read('AccountResponse.json')
+    And print 'response: ', response
