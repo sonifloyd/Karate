@@ -1,7 +1,5 @@
 Scenario Outline: Check Request and Response 
+Actual Url /transferreceiving/scancomplete/308935
 
-Given url 'http://abc/web/juk/nmr/Accounts('<accountNumber>')'
-    When method GET
-    Then status 200
-    And match $ == read('AccountResponse.json')
-    And print 'response: ', response
+And path 'transferreceiving/scancomplete'
+    And path boxNo
