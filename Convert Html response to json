@@ -1,0 +1,7 @@
+* def htmlResponse = response
+    Given url "https://html2json.com/api/v1"
+    And headers {content-type: 'application/x-www-form-urlencoded; charset=UTF-8', authority: 'html2json.com', origin:'https://html2json.com', cookie: '_ga=GA1.2.1819746775.1633598490; _gid=GA1.2.631729096.1633598490; _gat_UA-142133106-1=1'}
+    And request htmlResponse
+    When method post
+    Then status 200
+    And print response
