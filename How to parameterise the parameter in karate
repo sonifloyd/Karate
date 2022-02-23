@@ -12,3 +12,5 @@ query-parameters in one-line using params and this is especially useful for dyna
 
 parameterise like this 
  And param wmsCode = '#(wmsCode)'
+ 
+  And params {skid: #(skidNo)}
