@@ -1,0 +1,4 @@
+Yes, Karate supports performance testing using karate-gatling.
+
+Add karate-gatling dependency in pom.xml.
+Create a Gatling simulation
