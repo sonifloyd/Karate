@@ -1,0 +1,9 @@
+Answer:
+Use loop requests and check for 429 Too Many Requests.
+
+Scenario: Validate Rate Limiting
+    * def i = 0
+    * def result = []
+    * while (i < 10) karate.appendTo(result, karate.call('rateLimit.feature'))
+    * match result contains { status: 429 }
+This ensures the API blocks excessive requests.
