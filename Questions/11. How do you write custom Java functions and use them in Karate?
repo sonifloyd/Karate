@@ -1,0 +1,12 @@
+Create a Java Class (Utils.java)
+package helpers;
+public class Utils {
+    public static String getRandomEmail() {
+        return "test" + System.currentTimeMillis() + "@mail.com";
+    }
+}
+
+
+Call it in Karate:
+* def Utils = Java.type('helpers.Utils')
+* def email = Utils.getRandomEmail()
