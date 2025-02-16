@@ -1,0 +1,14 @@
+Answer:
+Use the karate.parallel() function in a Java runner class.
+
+import com.intuit.karate.Runner;
+import org.junit.jupiter.api.Test;
+
+class ParallelTestRunner {
+    @Test
+    void runTestsInParallel() {
+        Runner.path("classpath:tests")
+              .parallel(5); // Runs 5 threads in parallel
+    }
+}
+This helps in reducing test execution time.
