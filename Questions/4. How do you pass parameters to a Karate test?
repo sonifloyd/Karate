@@ -1,0 +1,25 @@
+
+Query Parameters:
+gherkin
+Copy
+Edit
+Given url 'https://api.example.com/users'
+And param id = '123'
+When method GET
+Then status 200
+
+Path Parameters:
+gherkin
+Copy
+Edit
+Given url 'https://api.example.com'
+And path 'users', '123'
+When method GET
+Then status 200
+
+Feature File Arguments:
+gherkin
+Copy
+Edit
+* def userId = karate.get('userId')
+Given url 'https://api.example.com/users/' + userId
