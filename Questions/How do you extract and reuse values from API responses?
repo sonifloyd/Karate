@@ -1,0 +1,12 @@
+Use JSONPath extractions.
+
+Scenario: Extract and Reuse Values
+    Given url baseUrl + '/customers'
+    When method GET
+    Then status 200
+    * def customerId = response.customers[0].id
+
+    Given url baseUrl + '/orders/' + customerId
+    When method GET
+    Then status 200
+This ensures efficient chaining of API calls.
