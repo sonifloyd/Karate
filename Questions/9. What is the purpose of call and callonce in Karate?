@@ -1,0 +1,5 @@
+call: Calls a reusable function or another feature file multiple times.
+callonce: Calls a reusable function only once per test run.
+
+* def auth = callonce read('auth.feature')
+* def token = auth.token
