@@ -1,0 +1,5 @@
+Karate allows external data loading using read() function:
+
+* def jsonData = read('data.json')
+
+* def csvData = karate.read('data.csv')
