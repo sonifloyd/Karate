@@ -1,0 +1,8 @@
+Use Karate’s retry configuration.
+Scenario: Validate API with Retry
+    * configure retry = { count: 3, interval: 2000 }
+    Given url baseUrl + '/inventory/check'
+    When method GET
+    Then status 200
+    * match response.stock > 0
+This retries API calls if they fail initially.
