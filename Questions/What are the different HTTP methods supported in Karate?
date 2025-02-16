@@ -1,0 +1,7 @@
+Karate supports the following HTTP methods:
+
+GET – Retrieve data
+POST – Create new data
+PUT – Update existing data
+PATCH – Partially update data
+DELETE – Remove data
