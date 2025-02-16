@@ -1,0 +1,4 @@
+Use JavaScript functions in Karate:
+
+* def randomId = function() { return Math.floor(Math.random() * 1000) }
+* def uuid = java.util.UUID.randomUUID().toString()
