@@ -1,0 +1,9 @@
+Answer:
+Use dynamic matchers (#string, #number, #uuid, #ignore, etc.).
+
+Scenario: Validate API response with dynamic values
+    Given url baseUrl + '/order/123'
+    When method GET
+    Then status 200
+    * match response == { orderId: '#uuid', status: 'Processed', createdAt: '#ignore' }
+This ensures UUID validation while ignoring timestamps.
