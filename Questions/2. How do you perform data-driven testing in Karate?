@@ -1,0 +1,15 @@
+Answer:
+Use Examples table with Scenario Outline:
+
+Scenario Outline: Validate Order Status
+    Given url baseUrl + '/order/<orderId>'
+    When method GET
+    Then status 200
+    * match response.status == '<expectedStatus>'
+
+Examples:
+    | orderId | expectedStatus |
+    | 101     | Shipped        |
+    | 102     | Pending        |
+This runs multiple tests with different data sets.
+
