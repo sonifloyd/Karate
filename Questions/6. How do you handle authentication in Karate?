@@ -1,0 +1,18 @@
+Karate supports various authentication mechanisms:
+
+Basic Authentication
+
+Given url 'https://api.example.com/login'
+And header Authorization = 'Basic ' + karate.encodeBase64('username:password')
+
+Bearer Token Authentication
+
+Given header Authorization = 'Bearer ' + token
+
+OAuth 2.0 Authentication:
+
+Given url 'https://auth.server.com/token'
+And request { username: 'admin', password: 'secret' }
+When method POST
+Then status 200
+And def token = response.access_token
