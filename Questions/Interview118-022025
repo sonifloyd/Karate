@@ -1,0 +1,19 @@
+What is differnce b/w put and delete 
+when we get 401 -> 
+When we get 405 -> 
+When we are getting 400 -> 
+When we get 201 and 409 
+Differnce b/c golab variable and evirnmnet variable :
+Basic Auth how its woking -> user name and password
+Shall we run multiple api in swaggar -> no postman is easy to do 
+How many evirnment do u have  :  QA and prod and loacal 
+Which env u are going to test :QA env 
+shall u share collection deatils in postman : Export option we can share the file 
+What are things we check in response body -> response code and validate the data 
+If request body is json but i have selected the html what response code we will get -> 415 unsupported media type 
+In Url instead of v2 i have enter v1  what request we will get( We have changed the version )  -> 404 not found 
+Change method type -> 405 method not found 
+What is query parameter . what is path parameter 
+Query parameter is in key and value form 
+
+
