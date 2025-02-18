@@ -1,0 +1,46 @@
+What is difference b/w soap and rest api 
+Feature	SOAP (Simple Object Access Protocol)	REST (Representational State Transfer)
+Protocol	Strict protocol	Architectural style
+Format	Uses XML only	Supports JSON, XML, plain text, etc.
+Speed	Slower (more overhead)	Faster (lightweight)
+Transport	Uses HTTP, SMTP, TCP, etc.	Uses only HTTP
+Security	More secure (WS-Security)	Relies on HTTPS and OAuth
+State	Stateful (maintains session)	Stateless (each request is independent)
+Usage	Used in banking, telecom, and enterprise apps	Used in web services, microservices, and mobile apps
+
+What are things we check in api testing 
+respnse code 
+response time 
+response data 
+authenication 
+
+What is difference b/w top down  modular and  upper module 
+ Question :If u given some testing which will write 1st white box testing or black box testing.
+
+It depends on the testing process and project stage:
+
+✅ White Box Testing (WBT) is done first (by developers) since it tests the internal code, logic, and structure.
+✅ Black Box Testing (BBT) comes after WBT (by testers) as it checks the functionality without looking at the code.
+Order of Testing in SDLC:
+1️⃣ Unit Testing (White Box) – Checks individual components.
+2️⃣ Integration Testing (White/Black Box) – Ensures components work together.
+3️⃣ System Testing (Black Box) – Verifies the complete application.
+4️⃣ User Acceptance Testing (UAT) (Black Box) – Ensures business requirements are met.
+
+✅ White Box first → Black Box later for functional validation.
+
+Question : What is work bench concet in software Testing 
+
+Its more like documentation  -> Test case execution -> testcases stpes all we document
+a/c to customer requiremnt so customer will see this much time has taken 
+Question : Random Tesing 
+Money testing when we dont know the requiremnet 
+
+Question : Error sheeding and error guesing 
+Error Seeding is planned, while Error Guessing relies on intuition
+
+Error Seeding	Intentionally injecting errors into the system to check if the testing process detects them.	Developers add known bugs to verify if testers can find them.	Evaluates the effectiveness of testing.
+Error Guessing	Predicting possible errors based on experience, without formal techniques.	A tester inputs special characters in a form to check for validation errors.	Finds hidden bugs quickly.
+
+Waht is differnce b/w load testing and stress testing 
+load testing within te limit and stress is with byound the limit 
