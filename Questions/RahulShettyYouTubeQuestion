@@ -1,0 +1,16 @@
+1.What are challenges u faced during api testing .
+Access to DB  :  What ever the response api is giving we have to validate through data bases 
+Authentication Overahead 
+
+What is difference b/w PUT and Post.
+Post - Create a new object on the server .
+Put - it will update the value on server  which it already present.
+
+What are commly used http methods .
+Get -> Retrive object on the server .
+Post ->Create object on the server
+Put -> update the data on server which already exist .
+delete -> Delete the data from server.
+
+List out Authentication used in API
+1.session / cookies /Basic authentication(user name and passwor / OAuth
