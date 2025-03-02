@@ -1,0 +1,28 @@
+✅ All HTTP Status Codes with Simple Examples 🔥
+Code	Meaning	Example
+1xx (Informational)		
+100	Continue	Request received, continue process
+101	Switching Protocols	Switching from HTTP to WebSocket
+2xx (Success)		
+200	OK	Request Successful
+201	Created	New User Registered
+202	Accepted	Request accepted but processing later
+204	No Content	Delete API → No response body
+3xx (Redirection)		
+301	Moved Permanently	URL changed permanently
+302	Found (Temporary Redirect)	Login page redirect
+304	Not Modified	Browser Cache Response
+4xx (Client Error)		
+400	Bad Request	Invalid JSON Payload
+401	Unauthorized	JWT Token missing
+403	Forbidden	User not allowed to access
+404	Not Found	Invalid URL
+405	Method Not Allowed	Using POST instead of GET
+409	Conflict	Email already registered
+422	Unprocessable Entity	Validation failed
+429	Too Many Requests	API Rate Limit Exceeded
+5xx (Server Error)		
+500	Internal Server Error	Server Crash
+502	Bad Gateway	Proxy server error
+503	Service Unavailable	Server Down
+504	Gateway Timeout	Slow API Response
