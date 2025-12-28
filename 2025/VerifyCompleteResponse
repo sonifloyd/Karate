@@ -1,0 +1,14 @@
+Scenario: Verify complete user response
+  Given url baseUrl
+  And path 'users', 1
+  When method get
+  Then status 200
+  And assert responseTime < 2000
+  And match responseHeaders['Content-Type'][0] contains 'application/json'
+  And match response ==
+  {
+    id: '#number',
+    name: '#string',
+    role: '#string',
+    active: '#boolean'
+  }
