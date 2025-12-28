@@ -1,0 +1,61 @@
+* def userId = 10
+And path 'users', '#(userId)'
+ actual -> /users/10
+--------
+* def name = 'soni'
+And request
+"""
+{
+  "username": "#(name)",
+  "role": "QA"
+}
+"""
+-----------------------
+* def a = 5
+* def b = 10
+
+And request
+"""
+{
+  "sum": "#(a + b)"
+}
+"""
+----------------------
+* def isAdmin = true
+
+And request
+"""
+{
+  "role": "#(isAdmin ? 'ADMIN' : 'USER')"
+}
+"""
+-------------------------
+And request { "id": "#(userId)" }
+
+-------------------
+Embedded expression in headers
+
+
+* def token = 'abc123'
+
+And header Authorization = 'Bearer #(token)'
+
+----------------------------------------
+Embedded expression in URL
+* def page = 2
+Given url baseUrl + '/users?page=#(page)'
+
+-----------------------------------------
+
+
+Then match response.id == '#(userId)'   ❌
+❌ Matchers ke saath #() use nahi hota
+correct way 
+Then match response.id == userId
+
+
+
+
+
+
+
