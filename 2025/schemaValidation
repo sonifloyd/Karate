@@ -1,0 +1,133 @@
+Q1. Schema validation kya hota hai?
+✅ Answer
+
+Schema validation ka matlab:
+
+Response ka structure aur data type check karna, value nahi
+
+Example
+Then match response ==
+{
+  id: '#number',
+  name: '#string'
+}
+
+Q2. match response kab use karte hain?
+✅ Answer
+
+Jab response OBJECT ho.
+
+Example
+{ "id": 1, "name": "Soni" }
+
+Then match response ==
+{
+  id: '#number',
+  name: '#string'
+}
+Q3. match each response kab use hota hai?
+✅ Answer
+
+Jab response ARRAY ho aur har element validate karna ho.
+
+Example
+
+[
+  { "id": 1 },
+  { "id": 2 }
+]
+
+Then match each response ==
+{
+  id: '#number'
+}
+
+❓Q4. #string, #number kya hote hain?
+✅ Answer
+
+Ye type matchers hote hain.
+
+Matcher	Meaning
+#string	value string honi chahiye
+#number	value number honi chahiye
+Q5. ##string ka matlab kya hai?
+✅ Answer
+
+##string = optional field
+
+Example
+Then match response ==
+{
+  id: '#number',
+  email: '##string'
+}
+✔ email ho → string
+✔ email na ho → PASS
+
+Q6. Array schema ka best short syntax kya hai?
+✅ Answer
+'#[] #(schemaVal)'
+
+Example
+* def schemaVal = { id: '#number' }
+
+Then match response ==
+'#[] #(schemaVal)'
+
+
+Q7. #[] ka matlab kya hai?
+✅ Answer
+#[]  → response must be an ARRAY
+
+Agar object aaya → ❌ FAIL
+
+Q8. #(schemaVal) kyun likhte hain?
+✅ Answer
+
+Ye embedded expression hai
+Runtime par schema inject karta hai.
+
+Then match response == '#(schemaVal)'
+
+Q9. match response ko array pe use kar sakte hain?
+❌ Answer
+
+Nahi.
+
+Then match response ==
+{ id: '#number' }   ❌
+
+
+Array ke liye:
+Then match each response ==
+{ id: '#number' }   ✅
+
+
+Q10. Real project me kaunsa zyada use hota hai?
+✅ Answer
+Then match each response.data ==
+{
+  id: '#number',
+  name: '#string'
+}
+
+
+Q11. Nested array ka schema kaise likhen?
+Example Response
+{
+  "users": [
+    { "id": 1, "roles": ["ADMIN"] }
+  ]
+}
+
+Answer
+Then match each response.users ==
+{
+  id: '#number',
+  roles: '#[]'
+}
+
+Q12. Interview ONE-LINER (MOST IMPORTANT)
+✅ Answer
+
+Schema validation in Karate ensures response structure and data types using matchers like #string, #number, and array validations using match each or #[].
