@@ -1,0 +1,5 @@
+Requirement	Correct way
+Array length	response.data.length == 24
+Cleaner	sizeOf(response.data) == 24
+Non-empty	assert response.data.length > 0
+Type check	response.data == '#[]'
