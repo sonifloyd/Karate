@@ -53,6 +53,35 @@ Then match response.id == '#(userId)'   ❌
 correct way 
 Then match response.id == userId
 
+----------------------------------------------------------
+Feature: validations with examples
+
+Scenario: To get all employees information in JSON format
+  Given url 'https://jsonplaceholder.typicode.com/posts/1'
+  When method get
+  Then status 200
+
+  # Define reusable schema
+  And def schemaVal =
+  """
+  {
+    "userId": "#number",
+    "id": "#number",
+    "title": "#string",
+    "body": "#string"
+  }
+  """
+
+  # Validate complete response using schema
+  And match response == '#(schemaVal)'
+
+
+With reuse (best practice)
+* def schemaVal = { ... }
+Then match response == '#(schemaVal)'
+
+-----
+
 
 
 
