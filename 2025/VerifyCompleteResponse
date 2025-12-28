@@ -12,3 +12,29 @@ Scenario: Verify complete user response
     role: '#string',
     active: '#boolean'
   }
+-----Match each 
+When method get
+Then status 200
+And match each response.data ==
+"""
+{
+  "id": "#string",
+  "employee_name": "#string",
+  "employee_salary": "#string",
+  "employee_age": "#string",
+  "profile_image": "##string"
+}
+"""
+##string = optional field
+
+Meaning:
+
+Field present ho → string honi chahiye
+
+Field missing ho → bhi test PASS karega
+
+----
+One-line rule (YAAD RAKHO)
+
+Object → match response
+Array → match each response
