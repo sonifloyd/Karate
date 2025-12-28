@@ -1,0 +1,28 @@
+src/test/java
+ └── common
+     └── login.feature
+ └── user
+     └── getUsers.feature
+
+Login feature file 
+Feature: Login
+
+Scenario:
+  Given url baseUrl
+  And path 'login'
+  And request { username: 'soni', password: '1234' }
+  When method post
+  Then status 200
+  * def token = response.token
+----- 
+Feature: Get Users
+
+Scenario:
+  * def loginResult = call read('classpath:common/login.feature')
+  * def authToken = loginResult.token
+
+  Given url baseUrl
+  And path 'users'
+  And header Authorization = 'Bearer ' + authToken
+  When method get
+  Then status 200
