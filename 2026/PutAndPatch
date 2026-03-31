@@ -1,0 +1,58 @@
+PUT vs PATCH (perfect interview answer)
+
+👉 Tumne bola:
+
+PUT pura resource update karta hai, PATCH partial karta hai
+
+✔ Ye correct hai, ab isko thoda professional bana do:
+
+🔹 PUT
+Full update karta hai resource ka
+Agar kuch fields missing ho → wo overwrite (null ya default) ho sakte hain
+Idempotent hota hai (same request baar-baar → same result)
+
+👉 Example:
+
+PUT /user/1
+{
+  "name": "Soni",
+  "age": 25
+}
+
+👉 Isme pura object replace ho jayega
+
+🔹 PATCH
+Partial update karta hai
+Sirf jo fields bhejo wahi update hoti hain
+Baaki data unchanged rehta hai
+
+👉 Example:
+
+PATCH /user/1
+{
+  "age": 26
+}
+
+👉 Sirf age change hogi
+
+💬 Interview me kaise bolo (ready line)
+
+👉 Short and strong:
+
+“PUT is used for full resource replacement, whereas PATCH is used for partial updates. PUT is idempotent and replaces the entire object, while PATCH updates only specific fields without affecting the rest.”
+
+⚡ Bonus point (impress karne ke liye)
+
+👉 Agar poocha “idempotent kya hai?”
+
+Bolna:
+
+“Idempotent means making the same request multiple times results in the same state.”
+
+🔥 Final tip
+
+Tum already correct bol rahi thi
+👉 bas thoda structured + confident bolna hai
+
+Aise hi aur Q&A bhejo
+👉 main tumhe interview-ready bana deta hu 💯
