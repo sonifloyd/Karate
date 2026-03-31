@@ -26,3 +26,5 @@ Code	Meaning	Example
 502	Bad Gateway	Proxy server error
 503	Service Unavailable	Server Down
 504	Gateway Timeout	Slow API Response
+👉 500 → server khud fail
+👉 502 → dusre server se galat response mila
